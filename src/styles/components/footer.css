@@ -1,0 +1,24 @@
+footer {
+  background-color: var(--NEUTRAL_BLACK);
+  padding: 66px 0 29px 0;
+}
+
+footer p {
+  margin-top: 29px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+@media (max-width: 660px) {
+  footer.fit-picture {
+    width: 122px;
+    height: 40px;
+  }
+  footer p {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}

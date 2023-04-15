@@ -1,0 +1,73 @@
+.home-banner {
+  background-image: url("../../assets/banners/home_background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 63px;
+  margin-bottom: 43px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  border-radius: 25px;
+  mix-blend-mode: darken;
+  padding: 78px 0;
+}
+
+.filter {
+  position: absolute;
+  background: var(--NEUTRAL_BLACK);
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  opacity: 0.3;
+}
+
+.banner p {
+  color: var(--NEUTRAL_WHITE);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 68px;
+  z-index: 1;
+}
+
+.card-section {
+  background-color: var(--GRAY_200);
+  flex-wrap: wrap;
+  border-radius: 25px;
+  padding: 25px 0;
+}
+
+@media (max-width: 660px) {
+  .banner p {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home-banner {
+    margin: 20px 0;
+  }
+  .banner {
+    border-radius: 10px;
+    padding: 31px 16px;
+  }
+  .filter {
+    border-radius: 10px;
+  }
+  .banner p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: start;
+  }
+  .card-section {
+    background-color: transparent;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    padding: 0px;
+  }
+}
