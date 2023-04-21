@@ -1,11 +1,11 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { TagList } from "../components/tags/TagList";
-import { ListInputOption } from "../components/inputs/ListInputOption";
-import { TextInputOption } from "../components/inputs/TextInputOption";
-import starOrange from "../assets/svg/stars/star_rate_orange.svg";
-import starGray from "../assets/svg/stars/star_rate_gray.svg";
-import { Gallery } from "../components/gallery/Gallery";
+import { TagList } from "../../components/tags/TagList";
+import { ListInputOption } from "../../components/inputs/ListInputOption";
+import { TextInputOption } from "../../components/inputs/TextInputOption";
+import starOrange from "../../assets/svg/stars/star_rate_orange.svg";
+import starGray from "../../assets/svg/stars/star_rate_gray.svg";
+import { Gallery } from "../../components/gallery/Gallery";
 
 export const Housing = () => {
   const location = useLocation();

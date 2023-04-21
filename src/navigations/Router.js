@@ -1,9 +1,9 @@
 import React from "react";
-import { Home } from "../screens/Home";
-import { About } from "../screens/About";
-import { Error } from "../screens/Error";
+import { Home } from "../screens/home/Home";
+import { About } from "../screens/about/About";
+import { Error } from "../screens/error/Error";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Housing } from "../screens/Housing";
+import { Housing } from "../screens/housing/Housing";
 import { RouteWrapper } from "./RouteWrapper";
 
 export const Router = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { TextInputOption } from "../components/inputs/TextInputOption";
+import { TextInputOption } from "../../components/inputs/TextInputOption";
 
 export const About = () => {
   const dataInput = [

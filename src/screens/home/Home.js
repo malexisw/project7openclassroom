@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Card } from "../components/card/Card";
+import { Card } from "../../components/card/Card";
 
 export const Home = () => {
   const [housings, setHousings] = useState([]);
 
   useEffect(() => {
-    const data = require("../api/logements.json");
+    const data = require("../../api/logements.json");
     setHousings(data);
     console.log(data);
   }, [setHousings]);
