@@ -1,5 +1,4 @@
 import React from "react";
-import { Header } from "../components/Header";
 import { TextInputOption } from "../components/inputs/TextInputOption";
 
 export const About = () => {
@@ -24,13 +23,17 @@ export const About = () => {
 
   return (
     <div>
-      <Header />
       <div className="about-banner banner flexCenteredAlign">
         <div className="filter"></div>
       </div>
       {dataInput.map((input, index) => (
         <div className="spaceAroundInput" key={index}>
-        <TextInputOption title={input.title} text={input.text} key={index} wide />
+          <TextInputOption
+            title={input.title}
+            text={input.text}
+            key={index}
+            wide
+          />
         </div>
       ))}
     </div>

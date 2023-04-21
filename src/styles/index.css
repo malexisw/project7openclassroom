@@ -44,7 +44,7 @@
   justify-content: space-between;
 }
 
-.app-content {
+.app-padding {
   padding: 40px 100px;
 }
 
@@ -140,13 +140,13 @@ button:active {
 }
 
 @media (max-width: 1100px) {
-  .app-content {
+  .app-padding {
     padding: 20px;
   }
 }
 
 @media (max-width: 1100px) and (min-width: 660px) {
-  .app-content {
+  .app-padding {
     height: 100%;
   }
 }

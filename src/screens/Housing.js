@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { Header } from "../components/Header";
 import { TagList } from "../components/tags/TagList";
 import { ListInputOption } from "../components/inputs/ListInputOption";
 import { TextInputOption } from "../components/inputs/TextInputOption";
@@ -39,8 +38,7 @@ export const Housing = () => {
   };
 
   return (
-    <div>
-      <Header />
+    <section>
       <Gallery pictures={housing.pictures} />
       <div className="housing-info">
         <div>
@@ -79,6 +77,6 @@ export const Housing = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

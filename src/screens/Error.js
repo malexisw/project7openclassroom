@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Error = () => {
   return (
-    <div className="error-container">
+    <section className="error-container app-padding">
       <Header />
       <div className="flexCenteredAlign flexColumn error-content">
         <div className="flexCenteredAlign flexColumn">
@@ -17,6 +17,6 @@ export const Error = () => {
           <Link to={"/"}>Retourner sur la page d’accueil</Link>
         </p>
       </div>
-    </div>
+    </section>
   );
 };

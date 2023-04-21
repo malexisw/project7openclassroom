@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Header } from "../components/Header";
 import { Card } from "../components/card/Card";
 
 export const Home = () => {
@@ -12,8 +11,7 @@ export const Home = () => {
   }, [setHousings]);
 
   return (
-    <div>
-      <Header />
+    <section >
       <div className="home-banner flexCenteredAlign banner ">
         <div className="filter"></div>
         <p>Chez vous, partout et ailleurs</p>
@@ -24,6 +22,6 @@ export const Home = () => {
           <Card housing={housing} key={housing.id} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };

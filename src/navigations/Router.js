@@ -4,20 +4,33 @@ import { About } from "../screens/About";
 import { Error } from "../screens/Error";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Housing } from "../screens/Housing";
+import { RouteWrapper } from "./RouteWrapper";
 
 export const Router = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: (
+        <RouteWrapper>
+          <Home />
+        </RouteWrapper>
+      ),
     },
     {
       path: "/about",
-      element: <About />,
+      element: (
+        <RouteWrapper>
+          <About />
+        </RouteWrapper>
+      ),
     },
     {
       path: "/housing",
-      element: <Housing />,
+      element: (
+        <RouteWrapper>
+          <Housing />
+        </RouteWrapper>
+      ),
     },
     {
       path: "*",
