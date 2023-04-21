@@ -2,33 +2,28 @@ import React, { createRef, useState } from "react";
 import chevronGallery from "../../assets/svg/chevron-gallery.svg";
 
 export const Gallery = ({ pictures }) => {
-  const galleryRef = createRef();
-  const [x, setX] = useState(0);
+  const [slide, setSlide] = useState(0);
 
   const slideLeft = () => {
-    const sizeImg = galleryRef.current.offsetWidth / pictures.length;
-
-    if (x !== 0) {
-      setX(x + sizeImg);
+    if (slide > 0) {
+      setSlide(slide - 1);
     } else {
-      setX(-sizeImg * (pictures.length - 1));
+      setSlide(pictures.length - 1);
     }
   };
 
   const slideRight = () => {
-    const sizeImg = galleryRef.current.offsetWidth / pictures.length;
-
-    if (x >= -sizeImg * (pictures.length - 2)) {
-      setX(x - sizeImg);
+    if (slide < pictures.length - 1) {
+      setSlide(slide + 1);
     } else {
-      setX(0);
+      setSlide(0);
     }
   };
 
   return (
     <div className="gallery">
-      <div
-        className="flexRow gallery-banner"
+      <ul
+        className="gallery-container"
         style={{ width: pictures.length + "00%" }}
       >
         {pictures.length > 0 && (
@@ -39,20 +34,6 @@ export const Gallery = ({ pictures }) => {
             onClick={() => slideLeft()}
           />
         )}
-        <div
-          className="flexRow gallery-content"
-          ref={galleryRef}
-          style={{ transform: `translateX(${x}px)` }}
-        >
-          {pictures.map((picture, index) => (
-            <img
-              src={picture}
-              key={index}
-              className="gallery-pic"
-              alt="Gallery picture"
-            />
-          ))}
-        </div>
         {pictures.length > 0 && (
           <img
             className="gallery-chevron right"
@@ -61,7 +42,17 @@ export const Gallery = ({ pictures }) => {
             onClick={() => slideRight()}
           />
         )}
-      </div>
+        {pictures.map((picture, index) => (
+          <li
+            className="gallery-slide"
+            key={index}
+            style={{
+              backgroundImage: "url(" + picture + ")",
+              transform: "translateX(" + -slide * 100 + "%)",
+            }}
+          ></li>
+        ))}
+      </ul>
     </div>
   );
 };
