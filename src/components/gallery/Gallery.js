@@ -1,4 +1,4 @@
-import React, { createRef, useState } from "react";
+import React, { useState } from "react";
 import chevronGallery from "../../assets/svg/chevron-gallery.svg";
 
 export const Gallery = ({ pictures }) => {
