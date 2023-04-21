@@ -3,7 +3,7 @@ import { Tag } from "./Tag";
 
 export const TagList = ({ textArray }) => {
   return (
-    <ul className="flexRow">
+    <ul className="flexRow wrap">
       {textArray.map((text, index) => (
         <li className="tag-list" key={index}>
           <Tag tagLabel={text} />

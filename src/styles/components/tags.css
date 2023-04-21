@@ -1,6 +1,7 @@
 .tag-container {
   border-radius: 10px;
   padding: 3px 40px;
+  margin-top: 5px;
 }
 
 .tag-list:not(:first-child) {
@@ -11,6 +12,8 @@
   font-size: 14px;
   line-height: 20px;
 }
+
+.wrap{ flex-wrap: wrap;}
 
 @media (max-width: 660px) {
   .tag-container {
