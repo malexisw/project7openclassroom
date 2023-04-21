@@ -2,6 +2,7 @@ import React from "react";
 import { TextInputOption } from "../../components/inputs/TextInputOption";
 
 export const About = () => {
+  //Array of data for the collapse inputs
   const dataInput = [
     {
       title: "Fiabilité",

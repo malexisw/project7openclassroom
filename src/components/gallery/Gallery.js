@@ -5,6 +5,7 @@ export const Gallery = ({ pictures }) => {
   const [slide, setSlide] = useState(0);
 
   const slideLeft = () => {
+    //If it's not the first slide
     if (slide > 0) {
       setSlide(slide - 1);
     } else {
@@ -13,6 +14,7 @@ export const Gallery = ({ pictures }) => {
   };
 
   const slideRight = () => {
+    //If it's not the last slide
     if (slide < pictures.length - 1) {
       setSlide(slide + 1);
     } else {

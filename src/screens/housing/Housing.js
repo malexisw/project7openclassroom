@@ -8,9 +8,11 @@ import starGray from "../../assets/svg/stars/star_rate_gray.svg";
 import { Gallery } from "../../components/gallery/Gallery";
 
 export const Housing = () => {
+  //Get the data sent by the route in the component card
   const location = useLocation();
   const housing = location.state.from;
 
+  //Function to render the stars
   const starRender = () => {
     let result = [];
     for (let i = 0; i < 5; i++) {

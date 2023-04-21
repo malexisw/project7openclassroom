@@ -5,9 +5,9 @@ export const Home = () => {
   const [housings, setHousings] = useState([]);
 
   useEffect(() => {
+    //Set the datas from the API files
     const data = require("../../api/logements.json");
     setHousings(data);
-    console.log(data);
   }, [setHousings]);
 
   return (
