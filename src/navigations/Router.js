@@ -25,7 +25,7 @@ export const Router = () => {
       ),
     },
     {
-      path: "/housing",
+      path: "/housing/:id",
       element: (
         <RouteWrapper>
           <Housing />
@@ -34,7 +34,11 @@ export const Router = () => {
     },
     {
       path: "*",
-      element: <Error />,
+      element: (
+        <RouteWrapper>
+          <Error />
+        </RouteWrapper>
+      ),
     },
   ]);
 

@@ -21,14 +21,14 @@ export const Gallery = ({ pictures }) => {
       setSlide(0);
     }
   };
-
+console.log(pictures)
   return (
     <div className="gallery">
       <ul
         className="gallery-container"
         style={{ width: pictures.length + "00%" }}
       >
-        {pictures.length > 0 && (
+        {pictures.length > 1 && (
           <img
             className="gallery-chevron left"
             src={chevronGallery}
@@ -36,7 +36,7 @@ export const Gallery = ({ pictures }) => {
             onClick={() => slideLeft()}
           />
         )}
-        {pictures.length > 0 && (
+        {pictures.length > 1 && (
           <img
             className="gallery-chevron right"
             src={chevronGallery}
@@ -54,6 +54,7 @@ export const Gallery = ({ pictures }) => {
             }}
           ></li>
         ))}
+        <p className="gallery-slideNumber">{slide+1}/{pictures.length}</p>
       </ul>
     </div>
   );

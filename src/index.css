@@ -55,6 +55,13 @@ code {
   justify-content: space-between;
 }
 
+.wrapper{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .app-padding {
   padding: 40px 100px;
 }

@@ -4,7 +4,7 @@ import { Header } from "../components/header/Header";
 
 export const RouteWrapper = ({children}) => {
   return (
-    <div>
+    <div className="wrapper">
       <div className="app-padding">
         <Header />
         {children}
