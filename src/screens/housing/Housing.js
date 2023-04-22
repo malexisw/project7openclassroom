@@ -61,7 +61,7 @@ export const Housing = () => {
             <img
               className="host-pic"
               src={housing.host.picture}
-              alt="Host picture"
+              alt="Host presentation"
             />
           </div>
           <div className="star-container">{starRender()}</div>
