@@ -21,7 +21,7 @@ export const Gallery = ({ pictures }) => {
       setSlide(0);
     }
   };
-console.log(pictures)
+ 
   return (
     <div className="gallery">
       <ul
