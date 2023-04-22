@@ -13,7 +13,7 @@ export const Housing = () => {
   const params = useParams();
 
   useEffect(() => {
-    //Set the datas from the API files
+    //Set the datas from the API files and filter with the id from the url
     const datas = require("../../api/logements.json");
     setHousing(datas.filter((data) => data.id === params.id)[0]);
   }, [setHousing]);
