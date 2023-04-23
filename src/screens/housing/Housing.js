@@ -6,6 +6,7 @@ import { TextInputOption } from "../../components/inputs/TextInputOption";
 import starOrange from "../../assets/svg/stars/star_rate_orange.svg";
 import starGray from "../../assets/svg/stars/star_rate_gray.svg";
 import { Gallery } from "../../components/gallery/Gallery";
+import { Error } from "../error/Error";
 
 export const Housing = () => {
   //Get the data sent by the route in the component card
@@ -47,7 +48,7 @@ export const Housing = () => {
 
   return (
     <section>
-      {housing && (
+      {housing ? (
         <>
           <Gallery pictures={housing.pictures} />
           <div className="housing-info">
@@ -88,6 +89,8 @@ export const Housing = () => {
             </div>
           </div>
         </>
+      ) : (
+        <Error />
       )}
     </section>
   );
