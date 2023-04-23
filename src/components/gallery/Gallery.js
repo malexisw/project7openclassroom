@@ -21,7 +21,7 @@ export const Gallery = ({ pictures }) => {
       setSlide(0);
     }
   };
- 
+
   return (
     <div className="gallery">
       <ul
@@ -54,7 +54,11 @@ export const Gallery = ({ pictures }) => {
             }}
           ></li>
         ))}
-        <p className="gallery-slideNumber">{slide+1}/{pictures.length}</p>
+        {pictures.length > 1 && (
+          <p className="gallery-slideNumber">
+            {slide + 1}/{pictures.length}
+          </p>
+        )}
       </ul>
     </div>
   );
